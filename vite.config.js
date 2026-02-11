@@ -1,11 +1,12 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
+  base: '/rcoi-web-dev/',
   server: {
     proxy: {
-      '/api': 'http://188.0.167.1:8080'
-    }
-  }
-})
+      '/api': 'http://188.0.167.1:8080',
+    },
+  },
+});
